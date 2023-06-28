@@ -1,0 +1,68 @@
+.blind {
+  position: absolute;
+  width: 1px;height: 1px;
+  overflow: hidden;
+  margin: -1px;
+  clip: rect(0 0 0 0);
+}
+.text-flow-area {
+  padding-top: 8vw;
+  display: flex;
+  overflow: hidden;
+  .headline {
+    font-size: 13.8vw;
+    text-transform: uppercase;
+    font-family: 'NeueWorld', sans-serif;
+  }
+}
+.arch {
+  .picture {
+    width: 100%;
+    height: 100%;
+  }
+}
+.link-util {
+  font-size: 1.7vw;
+  line-height: 1.5;
+}
+
+.narrow {
+  padding: 0 5.56vw;
+  box-sizing: border-box;
+}
+.icon {
+  display: inline-block;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.group-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  h3 {
+    font-size: 3.5vw;
+    line-height: 1.5;
+    letter-spacing: -1px;
+    word-break: keep-all;
+    font-weight: bold;
+  }
+  .col-left {
+    opacity: 0;
+    transition: all 0.6s ease-out;
+    // transform: translateY(40px);
+    // -webkit-transform: translateY(40px);
+    h3 {
+      margin-top: 4.5vw;
+    }
+  }
+  .col-right {
+    opacity: 0;
+    transition: all 0.6s ease-out;
+    // transform: translateY(40px);
+    // -webkit-transform: translateY(40px);
+    padding-left: 7vw;
+    h3 {
+      margin-top: 13.5vw;
+    }
+  }
+}

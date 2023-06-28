@@ -1,0 +1,91 @@
+.footer {
+  .group-grid {
+    display: grid;
+    grid-template-columns: 1.4fr 1.5fr;
+    border: solid #fff;
+    border-width: 0 0 1px 0;
+    .util-area {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      .util-block {
+        position: relative;
+        border: solid #fff;
+        border-width: 1px 1px 0 0;
+        .link-util {
+          display: block;
+          text-align: center;
+          padding-top: 2.5vw;
+          &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #fff;
+            opacity: 0;
+            pointer-events: none;
+          }
+          &:hover {
+            &::before {
+              opacity: 1;
+            }
+            .area-hidden {
+              opacity: 1;
+            }
+          }
+          .area-hidden {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            color: #131313;
+            opacity: 0;
+            white-space: nowrap;
+            overflow: hidden;
+            span {
+              padding: 0 10px;
+            }
+          }
+        }
+      }
+    }
+    .txt-flow-area {
+      height: 15vw;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      border: solid #fff;
+      border-width: 1px 0 0 0;
+      .link-home {
+        font-size: 13.8vw;
+        padding-right: 5vw;
+        text-transform: lowercase;
+        font-family: "NeueWorld", sans-serif;
+      }
+    }
+  }
+  .copy-area {
+    padding: 3vw 5vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .copy {
+      font-size: 1.7vw;
+      display: flex;
+      align-items: center;
+      &::before {
+        content: "©";
+        font-family: 'NeueWorld', sans-serif;
+        display: block;
+        position: relative;
+        font-size: 3.7vw;
+        margin-right: 0.7vw;
+        top: 0.4vw;
+      }
+    } 
+  }
+}
